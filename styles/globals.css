@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans theme-transition;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .theme-transition {
+    @apply transition-colors duration-300 ease-in-out;
+  }
+
+  .theme-transition-colors {
+    @apply transition-colors duration-200 ease-in-out;
+  }
+
+  .theme-transition-bg {
+    @apply transition-background-color duration-300 ease-in-out;
+  }
+}
+
+@layer base {
+  :root {
+    /* Light Theme - Coffee Inspired */
+    --background: 38 92% 98%;  /* Light cream */
+    --foreground: 24 16% 15%;  /* Dark coffee brown */
+    
+    --card: 36 67% 95%;       /* Lighter cream */
+    --card-foreground: 24 16% 15%;
+    
+    --popover: 36 67% 95%;    /* Lighter cream */
+    --popover-foreground: 24 16% 15%;
+    
+    --primary: 25 65% 35%;    /* Rich coffee brown */
+    --primary-foreground: 36 67% 95%;
+    
+    --secondary: 32 60% 85%;  /* Light tan */
+    --secondary-foreground: 25 65% 35%;
+    
+    --muted: 32 60% 90%;     /* Very light tan */
+    --muted-foreground: 24 30% 45%;
+    
+    --accent: 28 60% 75%;    /* Medium tan */
+    --accent-foreground: 25 65% 35%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 36 67% 95%;
+    
+    --border: 32 40% 80%;    /* Light border */
+    --input: 32 40% 80%;
+    --ring: 25 65% 35%;      /* Coffee brown */
+    
+    /* Coffee Theme Colors */
+    --coffee-50: 38 92% 98%;  /* Cream */
+    --coffee-100: 32 60% 90%; /* Light tan */
+    --coffee-200: 28 60% 80%; /* Tan */
+    --coffee-300: 25 50% 65%; /* Medium brown */
+    --coffee-400: 25 55% 50%; /* Coffee */
+    --coffee-500: 25 65% 35%; /* Dark coffee */
+    --coffee-600: 24 70% 25%; /* Espresso */
+    --coffee-700: 24 75% 20%; /* Dark espresso */
+    --coffee-800: 24 80% 15%; /* Almost black */
+    --coffee-900: 24 85% 10%; /* Black coffee */
+    
+    --radius: 0.5rem;
+    
+    /* Charts */
+    --chart-1: 25 65% 35%;   /* Coffee */
+    --chart-2: 32 60% 60%;   /* Lighter brown */
+    --chart-3: 28 60% 45%;   /* Medium brown */
+    --chart-4: 36 67% 70%;   /* Cream */
+    --chart-5: 24 70% 30%;   /* Dark coffee */
+    
+    /* Sidebar */
+    --sidebar-background: 36 67% 95%;
+    --sidebar-foreground: 24 16% 15%;
+    --sidebar-primary: 25 65% 35%;
+    --sidebar-primary-foreground: 36 67% 95%;
+    --sidebar-accent: 32 60% 85%;
+    --sidebar-accent-foreground: 25 65% 35%;
+    --sidebar-border: 32 40% 80%;
+    --sidebar-ring: 25 65% 35%;
+  }
+
+  .dark {
+    /* Dark Theme - Coffee Inspired */
+    --background: 24 16% 10%;  /* Dark coffee */
+    --foreground: 36 67% 90%;  /* Cream text */
+    
+    --card: 24 16% 12%;       /* Slightly lighter dark */
+    --card-foreground: 36 67% 90%;
+    
+    --popover: 24 16% 12%;
+    --popover-foreground: 36 67% 90%;
+    
+    --primary: 32 60% 70%;    /* Light tan */
+    --primary-foreground: 24 16% 10%;
+    
+    --secondary: 25 30% 20%;  /* Dark brown */
+    --secondary-foreground: 32 60% 70%;
+    
+    --muted: 25 20% 25%;     /* Medium dark */
+    --muted-foreground: 32 30% 60%;
+    
+    --accent: 25 25% 30%;    /* Slightly lighter dark */
+    --accent-foreground: 32 60% 70%;
+    
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 36 67% 90%;
+    
+    --border: 25 20% 30%;    /* Dark border */
+    --input: 25 20% 30%;
+    --ring: 32 60% 70%;      /* Light tan */
+    
+    /* Charts - Dark Mode */
+    --chart-1: 32 60% 60%;   /* Light tan */
+    --chart-2: 28 50% 50%;   /* Medium brown */
+    --chart-3: 25 60% 40%;   /* Coffee */
+    --chart-4: 36 50% 70%;   /* Light cream */
+    --chart-5: 24 60% 35%;   /* Dark coffee */
+    
+    /* Sidebar - Dark Mode */
+    --sidebar-background: 24 16% 12%;
+    --sidebar-foreground: 36 50% 80%;
+    --sidebar-primary: 32 60% 70%;
+    --sidebar-primary-foreground: 24 16% 12%;
+    --sidebar-accent: 25 20% 25%;
+    --sidebar-accent-foreground: 32 60% 70%;
+    --sidebar-border: 25 20% 30%;
+    --sidebar-ring: 32 60% 70%;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: var(--radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.8);
+}
+
+/* Selection colors */
+::selection {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
