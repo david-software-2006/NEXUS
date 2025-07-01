@@ -27,6 +27,8 @@ NEXUS fue desarrollado con el apoyo de inteligencia artificial, que ayudó a cre
 
 ### Pasos de instalación
 
+Todos estos comandos deberás de ejecutarlos en tu consola Git de Visual Studio Code 👇🏼
+
 1. **Clonar el repositorio**
    ```bash
    git clone https://github.com/david-software-2006/NEXUS.git
@@ -58,6 +60,8 @@ NEXUS fue desarrollado con el apoyo de inteligencia artificial, que ayudó a cre
 ## ▶️ Ejecución
 
 1. **Iniciar el servidor de desarrollo**
+
+En la carpeta principal del proyecto ejecuta : 
    ```bash
    npm run dev
    ```
